@@ -16,40 +16,44 @@
 				<img src="resources/logo.png" alt="logo">
 			</div>
 			<hr>
-			<div class="form" id="signupForm">
-				<div class="input-group">
-					<label for="name">Name</label>
-					<input type="text" id="name">
+			<form action="">
+				<div class="form" id="signupForm">
+					<div class="input-group">
+						<label for="name">Name</label>
+						<input type="text" id="name">
+					</div>
+					<div class="input-group">
+						<label for="email">Email</label>
+						<input type="email" id="email">
+					</div>
+					<div class="input-group">
+						<label for="pswd">Password:</label>
+						<input type="password" id="pswd">
+					</div>
+					<div class="input-group">
+						<label for="cpswd">Confirm password:</label>
+						<input type="password" id="cpswd">
+					</div>
+					<div class="button">
+						<button type="submit">Submit</button>
+					</div>
 				</div>
-				<div class="input-group">
-					<label for="email">Email</label>
-					<input type="email" id="email">
+			</form>
+			<form action="">
+				<div class="form hidden" id="loginForm">
+					<div class="input-group">
+						<label for="loginEmail">Email</label>
+						<input type="email" id="loginEmail">
+					</div>
+					<div class="input-group">
+						<label for="loginPswd">Password:</label>
+						<input type="password" id="loginPswd">
+					</div>
+					<div class="button">
+						<button type="submit">Login</button>
+					</div>
 				</div>
-				<div class="input-group">
-					<label for="pswd">Password:</label>
-					<input type="password" id="pswd">
-				</div>
-				<div class="input-group">
-					<label for="cpswd">Confirm password:</label>
-					<input type="password" id="cpswd">
-				</div>
-				<div class="button">
-					<button type="submit">Submit</button>
-				</div>
-			</div>
-			<div class="form hidden" id="loginForm">
-				<div class="input-group">
-					<label for="loginEmail">Email</label>
-					<input type="email" id="loginEmail">
-				</div>
-				<div class="input-group">
-					<label for="loginPswd">Password:</label>
-					<input type="password" id="loginPswd">
-				</div>
-				<div class="button">
-					<button type="submit">Login</button>
-				</div>
-			</div>
+			</form>
 			<div class="toggle">
 				<!-- Toggle Button -->
 				<a onclick="toggleForms()" id="toggle">Switch to Login</a>
@@ -73,18 +77,20 @@
 	</main>
 	<div id="myModal" class="modal">
 		<div class="modal-content">
-				<span class="close" onclick="closeModal()">&times;</span>
-				<h2>Forgot Password</h2>
-				<p>Please enter your email address below. We will send you a reset link.</p>
+			<span class="close" onclick="closeModal()">&times;</span>
+			<h2>Forgot Password</h2>
+			<p>Please enter your email address below. We will send you a reset link.</p>
+			<form action="">
 				<div class="input-group">
-						<label for="resetEmail">Email</label>
-						<input type="email" id="resetEmail">
+					<label for="resetEmail">Email</label>
+					<input type="email" id="resetEmail">
 				</div>
 				<div class="button">
-						<button onclick="sendResetLink()">Send Reset Link</button>
+					<button onclick="sendResetLink()">Send Reset Link</button>
 				</div>
+			</form>
 		</div>
-</div>
+	</div>
 	<script src="script.js"></script>
 </body>
 

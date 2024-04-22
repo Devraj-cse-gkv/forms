@@ -13,6 +13,9 @@ function toggleForms() {
       document.querySelector("#toggle").textContent = "Switch to Signup";
   }
 }
+
+
+// JavaScript function to open modal popup
 function openModal() {
   var modal = document.getElementById("myModal");
   modal.style.display = "block";
@@ -24,11 +27,24 @@ function closeModal() {
   modal.style.display = "none";
 }
 
+// JavaScript function to validate email format
+function validateEmail(email) {
+  var re = /\S+@\S+\.\S+/;
+  return re.test(email);
+}
+
 // JavaScript function to send reset link
 function sendResetLink() {
-  // Add code to send reset link
-  // For demonstration purpose, alert is used
-  var email = document.getElementById("resetEmail").value;
-  alert("Reset link sent to " + email);
-  closeModal(); // Close modal after sending reset link
+  var emailInput = document.getElementById("resetEmail");
+  var email = emailInput.value.trim();
+
+  if (validateEmail(email)) {
+      // Add code to send reset link
+      // For demonstration purpose, alert is used
+      alert("Reset link sent to " + email);
+      closeModal(); // Close modal after sending reset link
+  } else {
+      alert("Please enter a valid email address.");
+      emailInput.focus();
+  }
 }
